@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LexiRuta: simulador educativo de orientación jurídica y prevención de riesgos.">
+    <title>LexiRuta | Orientación jurídica inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-mark">L</div>
+            <div>
+                <strong>LexiRuta</strong>
+                <span>Innovación + Derecho</span>
+            </div>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#problema">Problema</a>
+            <a href="#solucion">Solución</a>
+            <a href="#simulador">Simulador</a>
+        </nav>
+
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Cambiar tema">☾</button>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">PROYECTO FINAL · INNOVACIÓN Y TI</p>
+                <h1>Entiende tu situación.<br><span>Decide tu siguiente paso.</span></h1>
+                <p class="hero-text">
+                    Un simulador web educativo que convierte información básica de una situación
+                    jurídica en una ruta de orientación clara, ordenada y comprensible.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn primary" href="#simulador">Probar simulador →</a>
+                    <a class="btn ghost" href="#solucion">Conocer la solución</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div><strong>5</strong><span>áreas de orientación</span></div>
+                    <div><strong>3</strong><span>niveles de prioridad</span></div>
+                    <div><strong>100%</strong><span>funciona en navegador</span></div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="visual-card">
+                    <div class="mini-top">
+                        <span class="status-dot"></span>
+                        Análisis en tiempo real
+                    </div>
+                    <div class="score-ring">
+                        <div>
+                            <strong id="demoScore">72</strong>
+                            <span>/100</span>
+                        </div>
+                    </div>
+                    <p class="visual-title">Prioridad de atención</p>
+                    <p class="visual-subtitle">Ruta recomendada disponible</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="problema" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">01 · PROBLEMA</p>
+                <h2>La información jurídica existe,<br>pero no siempre es fácil de entender.</h2>
+                <p>
+                    Una persona puede identificar que tiene un problema y, aun así, no saber
+                    qué información reunir, qué tan urgente puede ser o cuál debería ser su siguiente paso.
+                </p>
+            </div>
+
+            <div class="problem-grid">
+                <article class="info-card">
+                    <div class="card-number">01</div>
+                    <h3>Desorientación</h3>
+                    <p>La persona no sabe cómo ordenar la situación ni qué datos son relevantes.</p>
+                </article>
+                <article class="info-card">
+                    <div class="card-number">02</div>
+                    <h3>Urgencia invisible</h3>
+                    <p>Una notificación, plazo o riesgo puede pasar desapercibido si no se identifica a tiempo.</p>
+                </article>
+                <article class="info-card">
+                    <div class="card-number">03</div>
+                    <h3>Lenguaje complejo</h3>
+                    <p>Los conceptos jurídicos pueden resultar técnicos para quien no tiene formación en Derecho.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="solucion" class="section dark-section">
+            <div class="section-heading compact">
+                <p class="eyebrow">02 · SOLUCIÓN</p>
+                <h2>Una ruta digital en tres pasos.</h2>
+                <p>
+                    LexiRuta no sustituye a un profesional. Su objetivo académico es demostrar
+                    cómo una interfaz puede transformar datos de entrada en un resultado útil y explicable.
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-item">
+                    <span>1</span>
+                    <h3>Captura</h3>
+                    <p>El usuario selecciona el área y responde preguntas sencillas.</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-item">
+                    <span>2</span>
+                    <h3>Clasificación</h3>
+                    <p>JavaScript asigna una puntuación de prioridad según las respuestas.</p>
+                </div>
+                <div class="process-line"></div>
+                <div class="process-item">
+                    <span>3</span>
+                    <h3>Ruta</h3>
+                    <p>La página genera una recomendación educativa y un checklist de información.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulador" class="section simulator-section">
+            <div class="section-heading">
+                <p class="eyebrow">03 · FUNCIONAMIENTO</p>
+                <h2>Simulador de prioridad jurídica</h2>
+                <p>Responde las preguntas para generar una ruta personalizada de orientación.</p>
+            </div>
+
+            <div class="simulator-layout">
+                <form id="legalForm" class="simulator-card">
+                    <div class="step-row">
+                        <div class="step active">1</div>
+                        <div class="step-line"></div>
+                        <div class="step">2</div>
+                        <div class="step-line"></div>
+                        <div class="step">3</div>
+                    </div>
+
+                    <label for="area">1. ¿Qué tipo de situación tienes?</label>
+                    <select id="area" required>
+                        <option value="">Selecciona un área</option>
+                        <option value="laboral">Laboral</option>
+                        <option value="familiar">Familiar</option>
+                        <option value="penal">Penal</option>
+                        <option value="civil">Civil</option>
+                        <option value="administrativa">Administrativa</option>
+                    </select>
+
+                    <label for="deadline">2. ¿Existe una fecha límite, audiencia o notificación?</label>
+                    <select id="deadline" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="0">No lo sé / no existe</option>
+                        <option value="15">Sí, pero falta bastante tiempo</option>
+                        <option value="25">Sí, es próxima</option>
+                    </select>
+
+                    <label for="risk">3. ¿Existe un riesgo inmediato para tu seguridad o integridad?</label>
+                    <div class="option-grid">
+                        <label class="radio-card">
+                            <input type="radio" name="risk" value="0">
+                            <span>No</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="risk" value="30">
+                            <span>Sí</span>
+                        </label>
+                    </div>
+
+                    <label for="evidence">4. ¿Tienes documentos, mensajes u otra evidencia?</label>
+                    <div class="option-grid">
+                        <label class="radio-card">
+                            <input type="radio" name="evidence" value="0">
+                            <span>No / todavía no</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="evidence" value="-5">
+                            <span>Sí</span>
+                        </label>
+                    </div>
+
+                    <button class="btn primary full" type="submit">Analizar mi situación</button>
+
+                    <p class="disclaimer">
+                        Herramienta educativa para fines académicos. No constituye asesoría jurídica ni determina derechos u obligaciones.
+                    </p>
+                </form>
+
+                <aside id="resultPanel" class="result-card empty">
+                    <div class="result-icon">✦</div>
+                    <p class="eyebrow">RESULTADO</p>
+                    <h3>Tu ruta aparecerá aquí</h3>
+                    <p>
+                        Completa el formulario y el sistema mostrará un nivel de prioridad,
+                        una explicación y un checklist orientativo.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section feature-section">
+            <div class="section-heading compact">
+                <p class="eyebrow">04 · INNOVACIÓN</p>
+                <h2>¿Qué demuestra técnicamente el proyecto?</h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Interactividad</h3>
+                    <p>Eventos, validación de formularios, condiciones y resultados dinámicos con JavaScript.</p>
+                </article>
+                <article class="feature">
+                    <div class="feature-icon">◈</div>
+                    <h3>Diseño responsive</h3>
+                    <p>La interfaz se adapta a celular, tablet y computadora sin depender de frameworks.</p>
+                </article>
+                <article class="feature">
+                    <div class="feature-icon">◉</div>
+                    <h3>Arquitectura clara</h3>
+                    <p>HTML, CSS y JavaScript están separados en archivos con nombres limpios para GitHub Pages.</p>
+                </article>
+                <article class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3>Uso responsable de IA</h3>
+                    <p>El código puede documentarse explicando qué se generó, qué se corrigió y cómo se comprendió.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="section-heading compact">
+                <p class="eyebrow">05 · PREGUNTAS</p>
+                <h2>Preguntas frecuentes</h2>
+            </div>
+            <div class="faq">
+                <button class="faq-question" type="button">
+                    ¿La página da asesoría jurídica?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    No. Es un simulador educativo que muestra cómo una aplicación puede clasificar información y generar una ruta orientativa.
+                </div>
+
+                <button class="faq-question" type="button">
+                    ¿Qué sucede con mis datos?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Esta versión funciona en el navegador y no envía los datos a un servidor.
+                </div>
+
+                <button class="faq-question" type="button">
+                    ¿Qué tecnologías utiliza?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    HTML para la estructura, CSS para el diseño y JavaScript para la lógica e interacción. Puede publicarse en GitHub Pages.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <strong>LexiRuta</strong>
+            <p>Proyecto final · Innovación y Tecnologías de la Información</p>
+        </div>
+        <div class="footer-meta">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>GitHub Pages</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
